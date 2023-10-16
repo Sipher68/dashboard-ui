@@ -7,30 +7,24 @@ import { data } from 'src/data/mockdata';
   styleUrls: ['./summary.component.scss'],
   standalone: true,
 })
-export class SummaryComponent implements OnInit {
+export class SummaryComponent {
   public TO = data.Operators;
 
   public TOcount = Object.keys(this.TO).length;
 
-  public jeepCount;
+  public jeepArr: any = Object.values(this.TO);
+
+  public jeepCount = 0;
 
   public paoCount = Object.keys(data.PAO).length;
 
   public driverCount = Object.keys(data.Drivers).length;
 
-  ngOnInit(): void {
-    console.log(Object.keys(data));
+  ngOnInit() {
+    for (let i = 0; i < this.TOcount; i++) {
+      this.jeepCount = this.jeepCount + this.jeepArr[i]['Jeepney_Count'];
+    }
   }
 
-  constructor() {
-    this.jeepCount =
-      this.TO[1].Jeepney_Count +
-      this.TO[2].Jeepney_Count +
-      this.TO[3].Jeepney_Count +
-      this.TO[4].Jeepney_Count +
-      this.TO[5].Jeepney_Count +
-      this.TO[6].Jeepney_Count +
-      this.TO[7].Jeepney_Count +
-      this.TO[8].Jeepney_Count;
-  }
+  constructor() {}
 }

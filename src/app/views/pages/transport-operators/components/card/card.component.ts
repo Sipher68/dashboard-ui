@@ -16,10 +16,5 @@ export class CardComponent {
 
   ngOnInit() {
     this.cardValue = Object.values(this.cardData);
-    for (let i = 0; i < this.cardValue.length; i++) {
-      console.log(this.cardValue[i]);
-    }
-
-    console.log(this.cardValue[1]['Operator_Name']);
   }
 }
