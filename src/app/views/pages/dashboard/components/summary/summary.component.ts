@@ -14,7 +14,9 @@ export class SummaryComponent implements OnInit {
 
   public jeepCount;
 
-  public paoCount;
+  public paoCount = Object.keys(data.PAO).length;
+
+  public driverCount = Object.keys(data.Drivers).length;
 
   ngOnInit(): void {}
 
@@ -28,7 +30,5 @@ export class SummaryComponent implements OnInit {
       this.TO[6].Jeepney_Count +
       this.TO[7].Jeepney_Count +
       this.TO[8].Jeepney_Count;
-
-    this.paoCount = 1;
   }
 }
