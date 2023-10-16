@@ -253,4 +253,47 @@ export const data = {
     Password: '',
     SPIN: '',
   },
+
+  Bulletin: {
+    1: {
+      Department: 'CCTO',
+      Message_Location: 'MEMO',
+      Message: 'Re-routing due to road repair and construction',
+    },
+    2: {
+      Department: 'LTFRB',
+      Message_Location: 'MEMO',
+      Message: 'PUVs caught overloading will be fined PHP 1,500.00',
+    },
+    3: {
+      Department: 'CCTO',
+      Message_Location: 'MEMO',
+      Message: 'Re-routing due to road repair and construction',
+    },
+    4: {
+      Department: 'LTFRB',
+      Message_Location: 'MEMO',
+      Message: 'PUVs caught overloading will be fined PHP 1,500.00',
+    },
+    5: {
+      Department: 'CCTO',
+      Message_Location: 'MEMO',
+      Message: 'Re-routing due to road repair and construction',
+    },
+    6: {
+      Department: 'LTFRB',
+      Message_Location: 'MEMO',
+      Message: 'PUVs caught overloading will be fined PHP 1,500.00',
+    },
+    7: {
+      Department: 'CCTO',
+      Message_Location: 'MEMO',
+      Message: 'Re-routing due to road repair and construction',
+    },
+    8: {
+      Department: 'LTFRB',
+      Message_Location: 'MEMO',
+      Message: 'PUVs caught overloading will be fined PHP 1,500.00',
+    },
+  },
 };

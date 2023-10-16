@@ -1,0 +1,31 @@
+<!-- Loop through data to create card group for individual posts -->
+<div class="card rounded-top-4 mt-4 rounded-end-0 rounded-bottom-0 border-0">
+  <div class="card border-0 text-end me-3">
+    <div class="card-body">Filters</div>
+  </div>
+  <div class="container">
+    <div class="card border-0 ms-3 border-bottom rounded-0 border-2">
+      <div class="card-body">Bulletin</div>
+    </div>
+  </div>
+</div>
+
+<div class="container ps-3 pe-5 h-75 overflow-y-auto bg-white">
+  <div *ngFor="let value of cardValue">
+    <div class="card-group mt-3">
+      <div class="card mt-2 border-0 border-bottom rounded-0 w-25">
+        <div class="card-body text-start ps-4">{{ value["Department"] }}</div>
+      </div>
+      <div class="card mt-2 border-0 border-bottom rounded-0 w-50">
+        <div class="card-body">
+          {{ value["Department"] }} posted on {{ value["Message_Location"] }}.
+          {{ value["Message"] }}
+        </div>
+      </div>
+      <div class="card mt-2 border-0 border-bottom rounded-0 w-25">
+        <div class="card-body text-end">Pin/Unpin</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of cards -->
