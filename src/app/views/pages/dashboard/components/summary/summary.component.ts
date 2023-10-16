@@ -18,7 +18,9 @@ export class SummaryComponent implements OnInit {
 
   public driverCount = Object.keys(data.Drivers).length;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(Object.keys(data));
+  }
 
   constructor() {
     this.jeepCount =
