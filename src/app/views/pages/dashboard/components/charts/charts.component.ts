@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Chart } from 'chart.js/auto';
+import { count } from 'rxjs';
+import { data } from 'src/data/mockdata';
 
 @Component({
   selector: 'app-charts',
@@ -11,41 +13,76 @@ import { Chart } from 'chart.js/auto';
 export class ChartsComponent {
   public chart: any;
 
+  public jeepCount = Object.values(data.Operators);
+
+  public countArr = new Array();
+
   ngOnInit() {
+    for (let jeep of this.jeepCount) {
+      this.countArr.push(jeep['Jeepney_Count']);
+    }
     this.createChart();
   }
 
   createChart() {
     this.chart = new Chart('Charts', {
-      type: 'bar',
       data: {
-        // values on X-Axis
-        labels: [
-          '2022-05-10',
-          '2022-05-11',
-          '2022-05-12',
-          '2022-05-13',
-          '2022-05-14',
-          '2022-05-15',
-          '2022-05-16',
-          '2022-05-17',
-        ],
         datasets: [
           {
-            label: 'Sales',
-            data: ['467', '576', '572', '79', '92', '574', '573', '576'],
-            backgroundColor: 'blue',
+            type: 'bar',
+            label: 'Bar Dataset',
+            data: this.countArr,
+            barThickness: 30,
+            borderRadius: 10,
+            order: 1,
+            backgroundColor: '#1303fc',
           },
           {
-            label: 'Profit',
-            data: ['542', '542', '536', '327', '17', '0.00', '538', '541'],
-            backgroundColor: 'limegreen',
+            type: 'line',
+            label: 'Line Dataset',
+            data: this.countArr,
+            borderColor: '#f5f5f5',
+            backgroundColor: '#f5f5f5',
+            fill: true,
+            order: 2,
           },
         ],
+        labels: [
+          'Transport 1',
+          'Transport 2',
+          'Transport 3',
+          'Transport 4',
+          'Transport 5',
+          'Transport 6',
+          'Transport 7',
+          'Transport 8',
+        ],
       },
+
       options: {
         responsive: true,
         maintainAspectRatio: false,
+
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+        scales: {
+          x: {
+            grid: {
+              display: false,
+            },
+          },
+          y: {
+            grid: {
+              display: false,
+            },
+            ticks: {
+              stepSize: 10,
+            },
+          },
+        },
       },
     });
   }

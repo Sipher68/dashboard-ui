@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgFor } from '@angular/common';
 import { data } from 'src/data/mockdata';
 
 @Component({
@@ -6,5 +7,12 @@ import { data } from 'src/data/mockdata';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
   standalone: true,
+  imports: [NgFor],
 })
-export class TableComponent {}
+export class TableComponent {
+  public operators = Object.values(data.Operators);
+
+  ngOnInit() {
+    console.log(this.operators);
+  }
+}

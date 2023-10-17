@@ -1,13 +1,17 @@
-<div class="card mt-2 border-0">
-  <div class="card-title justify-content">Transport Operators</div>
-  <div class="card-body m-0 p-0">
+<div class="card mt-2 border-0 bg-transparent">
+  <div class="card-title justify-content-start ps-4">Transport Operators</div>
+  <div class="card-body m-0 p-0 bg-transparent">
     <div
-      class="table-wrapper-scroll-y my-custom-scrollbar table-responsive m-0 p-0"
+      class="table-wrapper-scroll-y my-custom-scrollbar table-responsive m-0 p-0 bg-transparent"
     >
-      <table class="table table-borderless table-hover mb-0 table-sm w-100">
+      <table
+        class="table table-borderless table-hover mb-0 table-sm w-100 bg-transparent"
+      >
         <thead>
-          <tr class="row">
-            <div class="col d-flex justify-content-evenly text-center">
+          <tr class="row bg-transparent">
+            <div
+              class="col d-flex justify-content-evenly text-center bg-transparent"
+            >
               <th scope="col">Operator's Name</th>
               <th scope="col">Date Enrolled</th>
               <th scope="col">Jeepney Count</th>
@@ -17,67 +21,22 @@
             </div>
           </tr>
         </thead>
-        <tbody>
-          <tr class="row">
-            <div class="col d-flex justify-content-evenly text-center">
-              <td scope="row">1</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>sample</td>
-              <td>test</td>
-            </div>
-          </tr>
-          <tr class="row">
-            <div class="col d-flex justify-content-evenly text-center">
-              <td scope="row">2</td>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td>sample</td>
-              <td>test</td>
-            </div>
-          </tr>
-          <tr class="row">
-            <div class="col d-flex justify-content-evenly text-center">
-              <td scope="row">3</td>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-              <td>sample</td>
-              <td>test</td>
-            </div>
-          </tr>
-          <tr class="row">
-            <div class="col d-flex justify-content-evenly text-center">
-              <td scope="row">4</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>sample</td>
-              <td>test</td>
-            </div>
-          </tr>
-          <tr class="row">
-            <div class="col d-flex justify-content-evenly text-center">
-              <td scope="row">5</td>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td>sample</td>
-              <td>test</td>
-            </div>
-          </tr>
-          <tr class="row">
-            <div class="col d-flex justify-content-evenly text-center">
-              <td scope="row">6</td>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-              <td>sample</td>
-              <td>test</td>
-            </div>
-          </tr>
+        <tbody class="bg-transparent">
+          <div *ngFor="let operator of operators">
+            <tr class="row bg-transparent" style="color: grey">
+              <div
+                class="col d-flex justify-content-evenly text-center"
+                style="height: 50px"
+              >
+                <td scope="row">{{ operator["Operator_Name"] }}</td>
+                <td>{{ operator["Date_Enrolled"] }}</td>
+                <td>{{ operator["Jeepney_Count"] }}</td>
+                <td>{{ operator["Driver_Count"] }}</td>
+                <td>{{ operator["PAO_Count"] }}</td>
+                <td>{{ operator["Status"] }}</td>
+              </div>
+            </tr>
+          </div>
         </tbody>
       </table>
     </div>
