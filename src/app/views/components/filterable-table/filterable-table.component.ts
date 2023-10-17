@@ -15,9 +15,9 @@ export class FilterableTableComponent {
   public table: any;
 
   ngOnInit() {
-    if (this.tableType == 'pao') {
+    if (this.tableType == 'PAO') {
       this.table = Object.values(data.PAO);
-    } else if (this.tableType == 'drivers') {
+    } else if (this.tableType == 'Drivers') {
       this.table = Object.values(data.Drivers);
     }
   }
