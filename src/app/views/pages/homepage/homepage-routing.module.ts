@@ -8,6 +8,7 @@ import { PaoComponent } from '../pao/pao.component';
 import { DriverComponent } from '../driver/driver.component';
 import { BlacklistComponent } from '../blacklist/blacklist.component';
 import { ProfileComponent } from '../profile/profile.component';
+import { ProfileCardComponent } from '../../components/profile-card/profile-card.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
       { path: 'driver', component: DriverComponent },
       { path: 'blacklist', component: BlacklistComponent },
       { path: 'profile', component: ProfileComponent },
+      { path: 'profile-component', component: ProfileCardComponent },
     ],
   },
 ];

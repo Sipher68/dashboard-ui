@@ -3,5 +3,70 @@
     <div class="card rounded-start-4 rounded-end-0 border-0">
       <div class="card-body fs-1 fw-bold align-middle">Blacklist</div>
     </div>
+
+    <!-- Search Bar Function -->
+    <div class="card mt-2 border border-0">
+      <div class="card border border-0 border-bottom rounded-bottom-0 w-50">
+        <div class="card-body">
+          <div class="form-floating">
+            <input class="form-control border border-0" placeholder="Search" />
+            <label for="floatingInput">Search Blacklist</label>
+          </div>
+        </div>
+      </div>
+      <!-- Start Table -->
+
+      <div class="container m-0 p-0 h-100 mt-0">
+        <div
+          class="card border border-0 border-bottom rounded-bottom-0 w-100 mt-3"
+        >
+          <div>
+            <div
+              class="card-group text-center border border-0 mb-3 m-2 fw-bold"
+            >
+              <div class="card border border-0">Name</div>
+              <div class="card border border-0">License</div>
+              <div class="card border border-0">Date Enrolled</div>
+              <div class="card border border-0">Date of Employment</div>
+              <div class="card border border-0">Employment Status</div>
+              <div class="card border border-0">No. of Violations</div>
+              <div class="card border border-0">Remarks</div>
+            </div>
+            <div
+              class="card border border-start-0 border-end-0 rounded-0 my-3 border-danger"
+              style="height: 75px"
+              *ngFor="let blacklist of blackLists"
+            >
+              <div
+                class="card-group text-center border border-0 my-auto fw-bold m-2"
+                style="font-size: 15px"
+              >
+                <div class="card border border-0 text-danger">
+                  {{ blacklist.Name }}
+                </div>
+                <div class="card border border-0 text-danger">
+                  {{ blacklist.License }}
+                </div>
+                <div class="card border border-0 text-danger">
+                  {{ blacklist.Date_Enrolled }}
+                </div>
+                <div class="card border border-0 text-danger">
+                  {{ blacklist.Date_Of_Employment }}
+                </div>
+                <div class="card border border-0 text-danger">
+                  {{ blacklist.Employment_Status }}
+                </div>
+                <div class="card border border-0 text-danger">
+                  {{ blacklist.Violations }}
+                </div>
+                <div class="card border border-0 text-danger">
+                  {{ blacklist.Remarks }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

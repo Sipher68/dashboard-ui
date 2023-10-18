@@ -24,7 +24,7 @@
         >
           <li
             *ngFor="let navItem of navItems"
-            class="nav-item text-decoration-none"
+            class="nav-item text-decoration-none pt-2"
           >
             <a
               routerLink="{{ navItem.link }}"
@@ -37,7 +37,7 @@
         </ul>
       </div>
     </div>
-    <div class="col-10 m-0 p-0">
+    <div class="col-10 mt-1 ps-4 pe-0">
       <router-outlet></router-outlet>
     </div>
   </div>

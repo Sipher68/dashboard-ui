@@ -5,15 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProfileComponent } from './views/pages/profile/profile.component';
-import { BlacklistComponent } from './views/pages/blacklist/blacklist.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BlacklistComponent,
-    ProfileComponent,
-    BlacklistComponent,
-  ],
+  declarations: [AppComponent, ProfileComponent],
   imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],

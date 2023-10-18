@@ -11,8 +11,4 @@ import { data } from 'src/data/mockdata';
 })
 export class TableComponent {
   public operators = Object.values(data.Operators);
-
-  ngOnInit() {
-    console.log(this.operators);
-  }
 }

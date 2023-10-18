@@ -1,44 +1,46 @@
-<div class="card mt-2 border-0 bg-transparent">
-  <div class="card-title justify-content-start ps-4">Transport Operators</div>
-  <div class="card-body m-0 p-0 bg-transparent">
-    <div
-      class="table-wrapper-scroll-y my-custom-scrollbar table-responsive m-0 p-0 bg-transparent"
-    >
-      <table
-        class="table table-borderless table-hover mb-0 table-sm w-100 bg-transparent"
+<div class="ms-5 me-5 mt-4">
+  <div class="card mt-2 border-0 bg-transparent">
+    <div class="card-title justify-content-start ps-4">Transport Operators</div>
+    <div class="card-body m-0 p-0 bg-transparent">
+      <div
+        class="table-wrapper-scroll-y my-custom-scrollbar table-responsive m-0 p-0 bg-transparent"
       >
-        <thead>
-          <tr class="row bg-transparent">
-            <div
-              class="col d-flex justify-content-evenly text-center bg-transparent"
-            >
-              <th scope="col">Operator's Name</th>
-              <th scope="col">Date Enrolled</th>
-              <th scope="col">Jeepney Count</th>
-              <th scope="col">Driver Count</th>
-              <th scope="col">PAO Count</th>
-              <th scope="col">Status</th>
-            </div>
-          </tr>
-        </thead>
-        <tbody class="bg-transparent">
-          <div *ngFor="let operator of operators">
-            <tr class="row bg-transparent" style="color: grey">
+        <table
+          class="table table-borderless table-hover mb-0 table-sm w-100 bg-transparent"
+        >
+          <thead>
+            <tr class="row bg-transparent">
               <div
-                class="col d-flex justify-content-evenly text-center"
-                style="height: 50px"
+                class="col d-flex justify-content-evenly text-center align-items-center bg-transparent"
               >
-                <td scope="row">{{ operator["Operator_Name"] }}</td>
-                <td>{{ operator["Date_Enrolled"] }}</td>
-                <td>{{ operator["Jeepney_Count"] }}</td>
-                <td>{{ operator["Driver_Count"] }}</td>
-                <td>{{ operator["PAO_Count"] }}</td>
-                <td>{{ operator["Status"] }}</td>
+                <th scope="col">Operator's Name</th>
+                <th scope="col">Date Enrolled</th>
+                <th scope="col">Jeepney Count</th>
+                <th scope="col">Driver Count</th>
+                <th scope="col">PAO Count</th>
+                <th scope="col">Status</th>
               </div>
             </tr>
-          </div>
-        </tbody>
-      </table>
+          </thead>
+          <tbody class="bg-transparent" style="height: 300px">
+            <div *ngFor="let operator of operators">
+              <tr class="row bg-transparent" style="color: grey">
+                <div
+                  class="col d-flex justify-content-evenly text-center align-items-center p-0"
+                  style="height: 75px"
+                >
+                  <td scope="row">{{ operator["Operator_Name"] }}</td>
+                  <td>{{ operator["Date_Enrolled"] }}</td>
+                  <td>{{ operator["Jeepney_Count"] }}</td>
+                  <td>{{ operator["Driver_Count"] }}</td>
+                  <td>{{ operator["PAO_Count"] }}</td>
+                  <td>{{ operator["Status"] }}</td>
+                </div>
+              </tr>
+            </div>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
